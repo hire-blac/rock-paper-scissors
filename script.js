@@ -104,6 +104,9 @@ function endGame(){
   playerChoiceNode.textContent = '';
   computerChoiceNode.textContent = '';
 
+  playerScore.textContent = '';
+  computerScore.textContent = '';
+
   gameWinner.textContent = '';
   document.querySelector('.round-winner').style.display = "none";
 }
