@@ -1,0 +1,50 @@
+* {
+  text-align: center;
+}
+.choose {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 30px auto 10px;
+}
+.choices {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  padding: 20px 0;
+  border: solid 1px grey;
+}
+.choices:active {
+  border: solid 2px red;
+}
+.results {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.round-winner {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border: solid 1px blue;
+  margin: 15px auto;
+  padding: 10px;
+  text-align: center;
+  align-content: center;
+}
+.player-computer-choices {
+  display: flex;
+  justify-content: space-around;
+
+}
+.win {
+  /* display: none; */
+  margin: 10px auto;
+}
+.end {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border: solid 1px red;
+  padding: 10px;
+}
