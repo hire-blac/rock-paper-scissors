@@ -5,13 +5,30 @@ const game_choices = {1: "Rock", 2: "Paper", 3: "Scissors"};
 let playerWins = 0;
 let compWins = 0;
 
+// list of button nodes
+const Buttons = document.querySelectorAll('.choices');
+// node to display player score
+const playerScore = document.getElementById('player-score');
+// node to display computer score
+const computerScore = document.getElementById('computer-score');
+
+// player and computer choice nodes
+const playerChoiceNode = document.querySelector('#player-choice');
+const computerChoiceNode = document.querySelector('#computer-choice');
+
+// game count for a round
+let gameCount = 0;
+
+// game winner display node
+const gameWinner = document.querySelector('.win-game');
+
+
 // computer makes a random hidden choice between rock, paper and scissors
 function computerPlay() {
   choice = (Math.floor(Math.random() * 10) % 3) + 1;
   let computer_choice = game_choices[choice];
   return computer_choice;
 }
-
 
 // compare user's and computer's choice to determine winner
 function checkWinner(computer_choice, player_choice) {
@@ -56,7 +73,6 @@ function checkWinner(computer_choice, player_choice) {
   return winner;
 }
 
-
 function roundWinner(playerWins, compWins) {
   let winner;
   // Display winner for the round
@@ -70,24 +86,6 @@ function roundWinner(playerWins, compWins) {
 
   return winner;
 }
-
-// list of button nodes
-const Buttons = document.querySelectorAll('.choices');
-// node to display player score
-const playerScore = document.getElementById('player-score');
-// node to display computer score
-const computerScore = document.getElementById('computer-score');
-
-// player and computer choice nodes
-const playerChoiceNode = document.querySelector('#player-choice');
-const computerChoiceNode = document.querySelector('#computer-choice');
-
-// game count for a round
-let gameCount = 0;
-
-
-// game winner display node
-const gameWinner = document.querySelector('.win-game');
 
 // event listener to play another game
 function playAgain() {
